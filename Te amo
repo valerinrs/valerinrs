@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te Amo, Luis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+            text-align: center;
+        }
+        #message {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        #response {
+            font-size: 20px;
+            color: #4caf50;
+            display: none;
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #yes {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+        }
+        #no {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="message">Te amo mucho, Luis. ¿Prometes no alejarte nunca de mí?</div>
+    <button id="yes" class="button" onclick="showResponse()">Sí</button>
+    <button id="no" class="button" onmouseover="moveNo()">No</button>
+    <div id="response">Muchas gracias, amor. Prometo cambiar 💖</div>
+
+    <script>
+        function showResponse() {
+            document.getElementById("response").style.display = "block";
+        }
+
+        function moveNo() {
+            const noButton = document.getElementById("no");
+            noButton.style.position = "absolute";
+            noButton.style.top = Math.random() * (window.innerHeight - 50) + "px";
+            noButton.style.left = Math.random() * (window.innerWidth - 100) + "px";
+        }
+    </script>
+</body>
+</html>
